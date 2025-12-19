@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar.jsx";
 
-const Home = () => {
+
+const Products = () => {
     const [product, setproduct] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -25,7 +25,7 @@ const Home = () => {
 
     return (
         <>
-            <Navbar />
+
 
             <div className="p-10">
                 <h1 className="text-3xl text-blue-400 text-center mb-6">
@@ -70,4 +70,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Products;

@@ -1,15 +1,9 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const ProtectedRoute = ({ children }) => {
-    const isAuthenticated = localStorage.getItem("username");
-    // ya token agar use kar rahe ho
-
-    if (!isAuthenticated) {
-        return <Navigate to="/login" replace />;
-    }
-
-    return children;
+const ProtectedRoute = () => {
+    const isAuth = localStorage.getItem("username");
+    return isAuth ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
 export default ProtectedRoute;

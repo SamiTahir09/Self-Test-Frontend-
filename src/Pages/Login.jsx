@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { useNavigate, Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ const Login = () => {
         e.preventDefault();
 
         if (!email || !password) {
-            alert("Please fill all fields");
+            toast.error("Please fill all fields");
             return;
         }
 
@@ -38,10 +39,11 @@ const Login = () => {
             setPassword("");
 
             navigate("/dashboard");
+            toast.success("Login Successful!");
 
         } catch (error) {
             console.error("Login Error:", error.response?.data);
-            alert(error.response?.data?.message || "Invalid email or password");
+            toast.error(error.response?.data?.message || "Invalid email or password");
         } finally {
             setLoading(false);
         }

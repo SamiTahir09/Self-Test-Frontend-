@@ -18,12 +18,12 @@ const SignUp = () => {
         e.preventDefault();
 
         if (!name || !email || !password || !confirmpassword) {
-            alert("Please fill all fields");
+            toast.error("All fields are required");
             return;
         }
 
         if (password !== confirmpassword) {
-            alert("Password and Confirm Password do not match");
+            toast.error("Password and Confirm Password do not match");
             return;
         }
 
@@ -49,7 +49,7 @@ const SignUp = () => {
 
         } catch (error) {
             console.error("Signup Error:", error.response?.data);
-            alert(error.response?.data?.message || "Signup failed");
+            toast.error(error.response?.data || "An error occurred during signup");
         }
     };
 
