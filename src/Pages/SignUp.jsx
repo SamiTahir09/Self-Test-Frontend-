@@ -52,7 +52,7 @@ const SignUp = () => {
 
         } catch (error) {
             console.error("Signup Error:", error.response?.data);
-            toast.error(error.response?.data?.message || "Signup failed");
+            toast.error(error.response?.data?.message);
         }
     };
 
