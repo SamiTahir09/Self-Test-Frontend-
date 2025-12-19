@@ -44,7 +44,7 @@ const SignUp = () => {
             setPassword("");
             setConfirmpassword("");
 
-            navigate("/dashboard");
+            navigate("/");
             toast.success("Signup Successful!");
             toast.failure("Signup Failed!");
 

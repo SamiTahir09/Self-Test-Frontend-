@@ -39,7 +39,7 @@ const Login = () => {
             setEmail("");
             setPassword("");
 
-            navigate("/dashboard");
+            navigate("/");
             toast.success("Login Successful!");
 
         } catch (error) {
