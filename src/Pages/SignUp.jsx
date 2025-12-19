@@ -17,6 +17,7 @@ const SignUp = () => {
     const handleButton = async (e) => {
         e.preventDefault();
 
+        // Validation
         if (!name || !email || !password || !confirmpassword) {
             toast.error("All fields are required");
             return;
@@ -28,32 +29,32 @@ const SignUp = () => {
         }
 
         try {
+            // ✅ Use backend URL directly
             const userData = await axios.post(
-                `https://self-test-frontend-y6pj.vercel.app/api/user/save`,
+                `https://self-test-backend-m1ok.vercel.app/api/user/save`,
+
                 { name, email, password }
             );
 
-
-
+            // Store token and username
             localStorage.setItem("token", userData.data.token);
             localStorage.setItem("username", userData.data.user.name);
 
-
+            // Reset form
             setName("");
             setEmail("");
             setPassword("");
             setConfirmpassword("");
 
+            // Navigate and success toast
             navigate("/products");
             toast.success("Signup Successful!");
-            toast.failure("Signup Failed!");
 
         } catch (error) {
             console.error("Signup Error:", error.response?.data);
-            toast.error(error.response?.data?.message);
+            toast.error(error.response?.data?.message || "Signup failed");
         }
     };
-
 
     return (
         <div className='flex flex-col justify-center items-center pt-10'>
