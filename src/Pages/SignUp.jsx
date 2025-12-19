@@ -29,7 +29,7 @@ const SignUp = () => {
 
         try {
             const userData = await axios.post(
-                `https://self-test-frontend-y6pj.vercel.app//api/user/save`,
+                `https://self-test-frontend-y6pj.vercel.app/api/user/save`,
                 { name, email, password }
             );
 
