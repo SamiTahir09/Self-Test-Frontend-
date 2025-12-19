@@ -24,8 +24,8 @@ const Login = () => {
             setLoading(true);
 
             const res = await axios.post(
-                `https://self-test-backend-m1ok.vercel.app/api/user/save`,
-                { name, email, }
+                `https://self-test-frontend-y6pj.vercel.app//api/user/login`,
+                { email, password }
             );
 
 
