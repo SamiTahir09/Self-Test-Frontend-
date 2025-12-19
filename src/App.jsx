@@ -7,7 +7,6 @@ import Navbar from "./Components/Navbar.jsx";
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Products from './Components/Products.jsx';
-import Movies from './Components/Recipe.jsx';
 import Carts from './Components/Carts.jsx';
 import Recipe from './Components/Recipe.jsx';
 
@@ -18,7 +17,7 @@ const App = () => {
 
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
 
         {/* Protected Routes */}

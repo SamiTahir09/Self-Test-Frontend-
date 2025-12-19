@@ -39,7 +39,7 @@ const Login = () => {
             setEmail("");
             setPassword("");
 
-            navigate("/");
+            navigate("/products");
             toast.success("Login Successful!");
 
         } catch (error) {
@@ -96,7 +96,7 @@ const Login = () => {
 
                     <p className='text-center mt-2'>
                         Don’t have an account?{" "}
-                        <Link to="/" className='text-blue-400'>
+                        <Link to="/signup" className='text-blue-400'>
                             Sign Up
                         </Link>
                     </p>
