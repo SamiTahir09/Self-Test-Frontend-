@@ -31,7 +31,7 @@ const SignUp = () => {
         try {
             // ✅ Use backend URL directly
             const userData = await axios.post(
-                `https://self-test-backend-h57i.vercel.app/api/user/save`,
+                `http://self-test-backend-h57i.vercel.app/api/user/save`,
 
                 { name, email, password }
             );
