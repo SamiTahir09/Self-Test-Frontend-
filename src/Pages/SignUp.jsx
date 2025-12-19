@@ -50,7 +50,7 @@ const SignUp = () => {
 
         } catch (error) {
             console.error("Signup Error:", error.response?.data);
-            toast.error(error.response?.data || "An error occurred during signup");
+            toast.error(error.response?.data?.message);
         }
     };
 
