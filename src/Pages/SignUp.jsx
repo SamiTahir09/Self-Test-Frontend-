@@ -29,9 +29,10 @@ const SignUp = () => {
 
         try {
             const userData = await axios.post(
-                "http://localhost:3000/api/user/save",
+                `https://self-test-backend-m1ok.vercel.app/api/user/save`,
                 { name, email, password }
             );
+
 
 
             localStorage.setItem("token", userData.data.token);

@@ -24,9 +24,10 @@ const Login = () => {
             setLoading(true);
 
             const res = await axios.post(
-                "http://localhost:3000/api/user/login",
-                { email, password }
+                `https://self-test-backend-m1ok.vercel.app/api/user/save`,
+                { name, email, }
             );
+
 
             console.log("Login Success:", res.data);
 
