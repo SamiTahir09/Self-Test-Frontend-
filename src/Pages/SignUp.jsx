@@ -30,7 +30,7 @@ const SignUp = () => {
 
         try {
             const userData = await axios.post(
-                `https://localhost:4000/api/user/save`,
+                'https://localhost:4000/api/user/save',
                 { name, email, password }
             );
 
