@@ -24,7 +24,7 @@ const Login = () => {
             setLoading(true);
 
             const res = await axios.post(
-                `https://self-test-backend-production.up.railway.app/api/user/login`,
+                `https://beneficial-miracle-production.up.railway.app/api/user/login`,
                 { email, password }
             );
 
