@@ -30,7 +30,7 @@ const SignUp = () => {
 
         try {
             const userData = await axios.post(
-                `https://self-test-backend-production-33f3.up.railway.app/api/user/save`,
+                `https://localhost:4000/api/user/save`,
                 { name, email, password }
             );
 
