@@ -5,4 +5,11 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  server: {
+    cors: {
+      origin: '*',   // ✅ allow all origins
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+    }
+  }
 })
